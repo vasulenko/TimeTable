@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vasulenko CV</title>
+    <!--build:css css/styles.min.css-->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!--endbuild-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<div class="table">
+    <div class="table__row table__row--head">
+        <div class="table__cell" id="group_id">
+            <select id="group_select">
+            </select>
+        </div>
+        <div class="table__row--head-wrapper">
+            <div class="table__cell">Понеділок</div>
+            <div class="table__cell">Вівторок</div>
+            <div class="table__cell">Середа</div>
+            <div class="table__cell">Четвер</div>
+            <div class="table__cell">П'ятниця</div>
+        </div>
+    </div>
+    <div class="table__row">
+        <div class="table__cell">8.30 - 9.50</div>
+        <div class="table__row-wrapper">
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+        </div>
+    </div>
+    <div class="table__row">
+        <div class="table__cell">10.00 - 11.20</div>
+        <div class="table__row-wrapper">
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+        </div>
+    </div>
+    <div class="table__row">
+        <div class="table__cell">11.30 - 12.50</div>
+        <div class="table__row-wrapper">
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+        </div>
+    </div>
+    <div class="table__row">
+        <div class="table__cell">13.10 - 14.30</div>
+        <div class="table__row-wrapper">
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+        </div>
+    </div>
+    <div class="table__row">
+        <div class="table__cell">14.40 - 16.00</div>
+        <div class="table__row-wrapper">
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+        </div>
+    </div>
+    <div class="table__row">
+        <div class="table__cell">16.10 - 17.30</div>
+        <div class="table__row-wrapper">
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+        </div>
+    </div>
+    <div class="table__row">
+        <div class="table__cell">17.40 - 19.00</div>
+        <div class="table__row-wrapper">
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+        </div>
+    </div>
+    <div class="table__row">
+        <div class="table__cell">19.10 - 20.30</div>
+        <div class="table__row-wrapper">
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+            <div class="table__cell"></div>
+        </div>
+    </div>
+</div>
+
+<button class="btn btn--edit" onclick="rewriteDOMForEdit()">Edit</button>
+<button class="btn btn--cancel btn--hide" onclick="backUp()">Cancel</button>
+<button class="btn btn--save btn--hide" onclick="saveState()">Save</button>
+<button class="btn btn--edit" onclick="addGroup()">Add group</button>
+
+</body>
+</html>

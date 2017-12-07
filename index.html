@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vasulenko CV</title>
+    <!--build:css css/styles.min.css-->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!--endbuild-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<div class="table">
+    <div class="table__row table__row--head">
+        <div class="table__cell">First Name</div>
+        <div class="table__cell">Second Name</div>
+        <div class="table__cell">Age</div>
+        <div class="table__cell">Phone</div>
+    </div>
+    <div class="table__row">
+        <div class="table__cell">Max</div>
+        <div class="table__cell">Krayevou</div>
+        <div class="table__cell">19</div>
+        <div class="table__cell">+380955744789</div>
+    </div>
+    <div class="table__row">
+        <div class="table__cell">Max</div>
+        <div class="table__cell">Krayevou</div>
+        <div class="table__cell">19</div>
+        <div class="table__cell">+380955744789</div>
+    </div>
+</div>
+<button class="btn btn--edit" onclick="rewriteDOMForEdit()">Edit</button>
+<button class="btn btn--cancel btn--hide" onclick="backUp()">Cancel</button>
+<button class="btn btn--save btn--hide" onclick="saveState()">Save</button>
+
+</body>
+</html>
