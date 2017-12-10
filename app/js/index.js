@@ -18,7 +18,23 @@ const getStateByPeople = _ => {
   let xhr = new XMLHttpRequest();
   const url = 'http://localhost:8000/people';
   xhr.open('POST', url, false);
-  xhr.send();
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({
+      people: selectedPeople
+    })
+  );
+  return JSON.parse(xhr.responseText);
+};
+
+const getStateByRoom = _ => {
+  let xhr = new XMLHttpRequest();
+  const url = 'http://localhost:8000/room';
+  xhr.open('POST', url, false);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({
+      room: selectedRoom
+    })
+  );
   return JSON.parse(xhr.responseText);
 };
 
@@ -108,6 +124,7 @@ const saveState = _ => {
     currentState.push(res);
   });
   postState(currentState.slice());
+  initDropdown();
   rewriteDOMForView(getInitState());
 };
 
@@ -191,7 +208,7 @@ window.onload = () => {
         selectedRoom = el.value;
       }
     });
-    rewriteDOMForView(getInitState());
+    rewriteDOMForView(getStateByRoom());
   });
 
   $('#people_select').change(_ => {
@@ -201,7 +218,7 @@ window.onload = () => {
         selectedPeople = el.value;
       }
     });
-    rewriteDOMForView(getInitState());
+    rewriteDOMForView(getStateByPeople());
   });
   rewriteDOMForView(getInitState());
 };
@@ -259,9 +276,7 @@ const rewriteDOMForEdit = _ => {
 const rewriteDOMForView = parsedData => {
   console.log(parsedData);
   const data = parsedData[0].storage;
-  if (!data[0][0].hasOwnProperty('top')) {
-    return;
-  }
+
   $('.table__row-wrapper').each((i, cell) => {
     let row = Array.from(cell.children);
     row.forEach((el, j) => {
